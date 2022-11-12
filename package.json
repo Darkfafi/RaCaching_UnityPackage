@@ -1,0 +1,23 @@
+{
+  "name": "rasofiagames.racaching",
+  "displayName": "RaCaching",
+  "version": "0.0.1",
+  "unity": "2019.4",
+  "description": "A simple caching system which allows to load cached data from DISK into RAM and and release it from RAM and remove it from DISK by custom calls or by expiration date",
+  "keywords": [
+    "Caching",
+    "Textures",
+    "System",
+    "API",
+    "Optimizations",
+    "Memory",
+    "RAM",
+    "DISK",
+    "Serialization",
+    "Deserialization"
+  ],
+  "author": {
+    "name": "Rasofia Games"
+  },
+  "type": "tool",
+}
