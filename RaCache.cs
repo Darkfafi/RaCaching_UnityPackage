@@ -39,9 +39,9 @@ namespace RaCaching
 		{
 			byte[] data = Encoding.ASCII.GetBytes(url);
 			using SHA1 sha = SHA1.Create();
-			sha.ComputeHash(data);
+			data = sha.ComputeHash(data);
 			string hash = BitConverter.ToString(data).Replace("-", "");
-			return hash.Substring(0, Mathf.Min(hash.Length, 10));
+			return string.Concat(hash.Substring(0, Mathf.Min(hash.Length, 10)), "-", hash.Substring(Mathf.Max(0, hash.Length - 10), Mathf.Min(hash.Length, 10)));
 		}
 
 		public RaCachedAssetBase<TValue>.RaStatusValueTResponse LoadValue<TValue>(string url, bool refreshExpiration = true)
